@@ -1,57 +1,66 @@
+.contenedor-reacciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-.contenedor-reacciones{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
+div {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .emoji-reaccion {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    cursor: pointer;
-    position: relative;
-    top: 11px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+
 }
 
-.emoji-reaccion:hover{
-    -webkit-transform:scale(1.3);transform:scale(1.3);
+.emoji-reaccion:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
 }
 
-.contenedor-nombre-reaccion {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transform: translate(0px, -33px);
-    transition: opacity 0.6s ease , transform 0.6s ease;
-    cursor: pointer;
+.contenedor-reacciones p {
+  font-size: 1.1rem;
+  text-align: center;
+  opacity: 0;
+  transform: translate(0px, -33px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
-.contenedor-nombre-reaccion:hover {
-    opacity: 1;
-    transform: translate(0px, -82px);
+
+.contenedor-reacciones>div:hover p{
+  opacity: 1;
+  transform: translate(0px, -130px);
+  color: #fff;
+  text-shadow: 2px 3px 6px #080808;
 }
+
 .nombre-reaccion {
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 2px 6px rgba(67,65,65,0.6);
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 2px 6px rgba(67, 65, 65, 0.6);
 
 }
 
-@media (max-width: 375px){
+@media (max-width: 375px) {
   .emoji-reaccion {
     position: relative;
     top: 20px;
     width: 30px;
   }
 
-  .contenedor-reacciones{
+  .contenedor-reacciones {
     margin: 0px;
     padding: 0px;
     width: 50px;
@@ -64,7 +73,7 @@
 
 }
 
-@media (min-width: 1280px) and (orientation: landscape){
+@media (min-width: 1280px) and (orientation: landscape) {
   .contenedor-nombre-reaccion:hover {
     opacity: 1;
     transform: translate(0px, 23px);
@@ -73,11 +82,10 @@
   }
 }
 
-@media (max-width: 812px) and (orientation: landscape){
+@media (max-width: 812px) and (orientation: landscape) {
   .contenedor-nombre-reaccion:hover {
     opacity: 1;
     transform: translate(0px, -77px);
 
   }
 }
-
